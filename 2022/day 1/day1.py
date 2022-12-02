@@ -26,8 +26,19 @@ for item in lista_int:
 
 print(f"o indice do elfo com o maior numero de calorias é {i}") 
 print(f"o maior número de calorias foi {maior_cal}")
-print(f"a lista de itens do elfo que mais consumiu calorias é {lista_int[i]}") 
+
+#PART 2
 
 
-    
+lista_sum = []
+top_calorias = []
 
+for item in lista_int:
+    lista_sum.append(sum(item))
+
+lista_sum.sort()
+top_calorias = lista_sum[-3:]
+
+top_calorias_sum = sum(top_calorias)
+
+print(f"O total carregado pelos elfos com maior numero de calorias é {top_calorias_sum}")
